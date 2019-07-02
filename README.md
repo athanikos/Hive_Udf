@@ -1,8 +1,7 @@
 # Udfs
-A custom UDF that uses an hdfs file as a lookup file where the left part is the name of the formula and the right part is the formula.
-Similar to :
+A custom UDF that uses an hdfs file as a lookup file 
 https://www.inovex.de/blog/hive-udf-lookups/
-With the right part of the formula being any expression supported by janino 
+With the right part of the formula being any expression supported by janino. 
 Tested with HDP 2.6 
 
 # use 
@@ -21,5 +20,5 @@ from
 )  as A
 
 
-Example lookup entry: 
+# Example lookup entry (see resources folder for population file): 
 FormualName|x==0 ? "0A" : x==1 ? "01" :  x==2 ? "02" : x==3 ? "03" : x==4 ? "04" :  x==5 ? "05" :  x==6 ? "06" : x==7 ? "07" : x==8 ? "08" : x==9 ? "09" : "00"
