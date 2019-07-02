@@ -18,5 +18,5 @@ from
 )  as A
 
 
-Example lookup entry 
+Example lookup entry: 
 FormualName|x==0 ? "0A" : x==1 ? "01" :  x==2 ? "02" : x==3 ? "03" : x==4 ? "04" :  x==5 ? "05" :  x==6 ? "06" : x==7 ? "07" : x==8 ? "08" : x==9 ? "09" : "00"
