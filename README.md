@@ -1,5 +1,8 @@
 # Udfs
 A custom UDF that uses an hdfs file as a lookup file where the left part is the name of the formula and the right part is the formula.
+Similar to :
+https://www.inovex.de/blog/hive-udf-lookups/
+With the right part of the formula being any expression supported by janino 
 Tested with HDP 2.6 
 
 # use 
