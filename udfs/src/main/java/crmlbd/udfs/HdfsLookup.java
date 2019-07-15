@@ -18,7 +18,7 @@ import com.google.protobuf.TextFormat.ParseException;
 public class HdfsLookup {
 	
 	  private  HashMap<String, String> lookup;
-	  private String delimeter = "|";
+	  private String delimeter;
 	
 	  HdfsLookup()
 	  {
