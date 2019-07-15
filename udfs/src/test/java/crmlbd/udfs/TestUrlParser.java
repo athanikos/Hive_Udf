@@ -1,12 +1,8 @@
 package crmlbd.udfs;
-
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-
-public class TestUrlParser {
-
-	
+public class TestUrlParser {	
 	@Test 
 	public void testUrlParser1() 
 	{ 
