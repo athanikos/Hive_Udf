@@ -15,8 +15,7 @@ public class TestLineParser {
 	public void TEstStringToString() throws CompileException, InvocationTargetException, HiveException, IOException
 	{
 		HashMap<String, String> lookup= new HashMap<String, String>();
-	    // todo popualate 
-		lookup.put("ActiveCards" ,"x>=0 && x<=3 ? \"01\" : \"00\""   );
+	    lookup.put("ActiveCards" ,"x>=0 && x<=3 ? \"01\" : \"00\""   );
 		assertEquals(LineParser.getRightPart("ActiveCards", lookup),"x>=0 && x<=3 ? \"01\" : \"00\"");
     } 
 }

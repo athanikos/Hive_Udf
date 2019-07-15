@@ -26,7 +26,7 @@ public class TestEvaluator {
         assertEquals("42", se.evaluate(new Object[0]));
     }  
     
-   // @Test
+    @Test
     public void testSwitch3()  throws CompileException, InvocationTargetException  {
         ScriptEvaluator se = new ScriptEvaluator();
         se.setReturnType(String.class); 
@@ -38,37 +38,34 @@ public class TestEvaluator {
         se.cook(expr.replace("x", "0232"));
         assertEquals(null, se.evaluate(new Object[0]));
         
-        
         String result =
         		_evaluator.evaluateScript("switch(x) { case 01: return \"42\"; case 02: return \"43\"; default: return null; }"
         		,"01"
         		);
         assertEquals(result, "42");
-        
-        
-       result =
+   
+        result =
     		   _evaluator.evaluateScript("switch(x) { case 01: return \"42\"; case 02: return \"43\"; default: return null; }"
                 		,"1"
                 		);
                 assertEquals(result, "42");
                 
-                    result =
+         result =
                     		_evaluator.evaluateScript("if (x==\"01\") return \"16-25\"; else if (x==\"02\") return \"26-40\"; else return null;   "
                                  		,"\"01\""
                                  		);
                                  assertEquals(result, "16-25");
                                  
-                    result =
+         result =
                     		_evaluator.evaluateScript("if (x==\"01\") return \"16-25\"; else if (x==\"02\") return \"26-40\"; else return null;   "
                                          		,"\"02\""
                                          		);
                                          assertEquals(result, "26-40");
-                      result =
+         result =
                     		  _evaluator.evaluateScript("if (x==\"01\") return \"16-25\"; else if (x==\"02\") return \"26-40\"; else return null;   "
                                                  		,"\"11\""
                                                  		);
                                                  assertEquals(result, null);                      
-                                         
     }
          
 	@Test
