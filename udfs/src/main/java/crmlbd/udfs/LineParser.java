@@ -14,8 +14,9 @@ public class LineParser {
 				{
 					rightPart =   lookup.get(fieldName);
 					return rightPart;
-				} catch (Exception  e ) {
-	               throw new HiveException(e  + " while parsining line " + rightPart);
+				} 
+				catch (Exception  e ) {
+	               			throw new HiveException(e  + " while parsining line " + rightPart);
 				}
 			}
 			else
