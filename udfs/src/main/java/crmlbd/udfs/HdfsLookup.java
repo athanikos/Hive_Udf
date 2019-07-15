@@ -33,7 +33,6 @@ public class HdfsLookup {
 		       {  
 					        Path path = new Path(lookupFile);
 					        Configuration configuration = new Configuration();
-					   
 					        FileSystem fileSystem = FileSystem.get(new URI(UrlParser.ParseUrl(lookupFile)),configuration);
 					        bufferedReader = new BufferedReader(new InputStreamReader(fileSystem.open(path)));
 					        String line = null;
@@ -42,14 +41,13 @@ public class HdfsLookup {
 					            lookup.put(items[0], items[1]);
 					    	    line = bufferedReader.readLine();
 					        }
-					        
 					       
 					        return lookup;		        
-				} 
-				catch (Exception e) 
+			} 
+			catch (Exception e) 
 		        {
 					throw new HiveException(e + ": when attempting to access: " + lookupFile);
-				} 
+			} 
 		        finally 
 		        {
 		        	if (bufferedReader!=null)
